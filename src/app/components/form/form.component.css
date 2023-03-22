@@ -1,0 +1,25 @@
+.lista-tareas{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.porcentaje-progress{
+  display: flex;
+
+ }
+
+ .progreso{
+  align-items: start;
+  margin-right: 1rem;
+  height: 30px;
+ }
+
+ .acciones{
+  margin-right: 1rem;
+ }
+
+ .tached{
+  text-decoration: line-through;
+ }

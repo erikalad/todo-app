@@ -1,0 +1,51 @@
+
+<div>
+  <h3 class="todoapp-title">TODOAPP</h3>
+<form class="row g-3">
+  <div class="col-auto">
+    <label for="exampleFormControlTextarea1" class="form-label">Nueva tarea</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" #newTodo (ngModel)="newTodo">{{textarea}}</textarea>
+  </div>
+  <div >
+    <button type="submit" class="btn btn-primary mb-3" (click)="cargarTodo(newTodo.value)">Cargar</button>
+  </div>
+</form>
+<!--   <a href="/actividades"><button type="button" class="btn btn-primary mb-3"  >Ver todas las tareas</button></a> -->
+</div>
+
+<div class="card"  *ngFor="let dato of dataService.data,index as i">
+  <div class="card-body lista-tareas">
+   <p [ngClass]="{'tached':dato.status===true}">{{dato.text}}</p>
+   <div>
+   <a type="button" class="acciones" (click)="realicedTodo(dato.text,i)"><span class="material-icons">
+    done
+    </span></a> <a type="button" (click)="deleteTodo(i)"><span class="material-icons">
+    delete
+    </span></a>
+  </div>
+  </div>
+</div>
+
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" (click)="viewEstadisticas()">Estadisticas</button>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Estadisticas</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+   <p>Cantidad de tareas : {{dataService.data.length}}</p>
+   <p>Pendientes : {{dataService.data.length-dataService.realizadas.length}}</p>
+   <p>Realizadas :{{dataService.realizadas.length}}</p>
+   </div>
+
+   <p>% Realizadas</p>
+   <div class="porcentaje-progress">
+    <progress class="progreso" max="100" [value]="porcentaje"></progress>
+    <div>{{porcentaje}}%</div>
+  </div>
+
+</div>
+
+
