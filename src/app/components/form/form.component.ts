@@ -29,7 +29,7 @@ export class FormComponent implements OnInit {
     this.newTodo=''
     this.textarea=''
     console.log(this.dataService.data)
-    alert('Tu tarea se creo con éxito')
+
   }
 
   deleteTodo(i:number){

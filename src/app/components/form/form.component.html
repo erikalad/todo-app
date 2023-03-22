@@ -7,7 +7,25 @@
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" #newTodo (ngModel)="newTodo">{{textarea}}</textarea>
   </div>
   <div >
-    <button type="submit" class="btn btn-primary mb-3" (click)="cargarTodo(newTodo.value)">Cargar</button>
+    <button type="submit" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="cargarTodo(newTodo.value)">Cargar</button>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Traea Añadida!</h1>
+
+        </div>
+        <div class="modal-body">
+          Tu tarea se añadio con éxito
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar </button>
+
+        </div>
+      </div>
+    </div>
   </div>
 </form>
 <!--   <a href="/actividades"><button type="button" class="btn btn-primary mb-3"  >Ver todas las tareas</button></a> -->
