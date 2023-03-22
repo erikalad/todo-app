@@ -1,13 +1,12 @@
 
 <div>
-  <h3 class="todoapp-title">TODOAPP</h3>
+  <h3 class="todoapp-title">Lista de tareas</h3>
 <form class="row g-3">
   <div class="col-auto">
-    <label for="exampleFormControlTextarea1" class="form-label">Nueva tarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" #newTodo (ngModel)="newTodo">{{textarea}}</textarea>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" #newTodo (ngModel)="newTodo" placeholder="Nueva tarea">{{textarea}}</textarea>
   </div>
   <div >
-    <button type="submit" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="cargarTodo(newTodo.value)">Cargar</button>
+    <button type="submit" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="cargarTodo(newTodo.value)">Añadir</button>
   </div>
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -30,7 +29,9 @@
 </form>
 <!--   <a href="/actividades"><button type="button" class="btn btn-primary mb-3"  >Ver todas las tareas</button></a> -->
 </div>
-
+<div *ngIf="dataService.data.length === 0"><div class="card sin-tareas">Sin tareas<span class="material-icons">
+  note_add
+  </span> </div></div>
 <div class="card"  *ngFor="let dato of dataService.data,index as i">
   <div class="card-body lista-tareas">
    <p [ngClass]="{'tached':dato.status===true}">{{dato.text}}</p>
@@ -44,7 +45,10 @@
   </div>
 </div>
 
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" (click)="viewEstadisticas()">Estadisticas</button>
+
+<button class="btn btn-primary boton-estadisticas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" (click)="viewEstadisticas()">Estadisticas <span class="material-icons">
+  bar_chart
+  </span></button>
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">

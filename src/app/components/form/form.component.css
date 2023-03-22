@@ -23,3 +23,26 @@
  .tached{
   text-decoration: line-through;
  }
+
+
+
+ .card{
+  margin-bottom: 1rem;
+ }
+
+ .sin-tareas{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  height: 2rem;
+  width: 70%;
+ }
+
+ .boton-estadisticas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ }
