@@ -83,3 +83,8 @@ flex-direction: column;
 .todoapp-title{
   text-align: center;
 }
+
+.titulos{
+  background-color: rgb(8, 0, 84);
+  color:white
+}

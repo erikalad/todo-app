@@ -61,28 +61,28 @@
   <div class="offcanvas-body contenedor-cartas-estadistica">
 
       <div class="card text-bg-light mb-3 cartita" >
-        <div class="card-header">Cantidad de tareas</div>
+        <div class="card-header titulos">Cantidad de tareas</div>
         <div class="card-body">
           <h5 class="card-title">{{dataService.data.length}}</h5>
         </div>
       </div>
 
       <div class="card text-bg-light mb-3 cartita" >
-        <div class="card-header">Pendientes</div>
+        <div class="card-header titulos">Pendientes</div>
         <div class="card-body">
           <h5 class="card-title">{{dataService.data.length-dataService.realizadas.length}}</h5>
         </div>
       </div>
 
       <div class="card text-bg-light mb-3 cartita" >
-        <div class="card-header">Realizadas</div>
+        <div class="card-header titulos">Realizadas</div>
         <div class="card-body">
           <h5 class="card-title">{{dataService.realizadas.length}}</h5>
         </div>
       </div>
 
       <div class="card text-bg-light mb-3 cartita" >
-        <div class="card-header">%</div>
+        <div class="card-header titulos">%</div>
         <div class="card-body">
           <div class="porcentaje-progress">
             <progress class="progreso" max="100" [value]="porcentaje"></progress>

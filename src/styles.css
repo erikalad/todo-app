@@ -10,11 +10,12 @@ p{
 }
 
 .btn-primary{
-  background-color: rgba(255, 242, 176, 0.799);
+  background-color: rgb(8, 0, 84);
+  color:white;
   border:none;
-  color:rgb(64, 64, 64)
+
 }
 
 .btn-primary:hover{
-  background-color:rgba(244, 215, 71, 0.796); ;
+  background-color:rgb(16, 0, 164);
 }
