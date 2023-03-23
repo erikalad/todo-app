@@ -78,6 +78,10 @@ flex-direction: column;
   border:1px solid grey;
   padding: 5rem;
   border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 9px 10px 19px 0px rgba(114,114,114,1);
+-webkit-box-shadow: 9px 10px 19px 0px rgba(114,114,114,1);
+-moz-box-shadow: 9px 10px 19px 0px rgba(114,114,114,1);
 }
 
 .todoapp-title{

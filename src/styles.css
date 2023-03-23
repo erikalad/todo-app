@@ -3,6 +3,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+
 }
 
 p{
@@ -19,3 +20,6 @@ p{
 .btn-primary:hover{
   background-color:rgb(16, 0, 164);
 }
+
+
+

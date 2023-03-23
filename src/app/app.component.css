@@ -3,9 +3,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top:3rem
+  margin-top:3rem;
+
+
 }
 
 *{
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
+
+
