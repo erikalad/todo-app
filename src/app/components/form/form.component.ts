@@ -24,13 +24,15 @@ export class FormComponent implements OnInit {
   porcentaje:number= 0
   check:boolean=false
 
+
+
   cargarTodo(data:string){
     this.dataService.data.push({text:data,status:false})
     this.newTodo=''
     this.textarea=''
-    console.log(this.dataService.data)
 
-  }
+
+    }
 
   deleteTodo(i:number){
     this.dataService.data.splice(i,1)
@@ -54,7 +56,7 @@ export class FormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+   this.textarea=''
    this.dataService.porcentaje=this.porcentaje
   }
 
