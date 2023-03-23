@@ -46,3 +46,9 @@
   align-items: center;
   text-align: center;
  }
+
+ .card-estadisticas
+{
+  width: 70%;
+  padding:1rem
+}

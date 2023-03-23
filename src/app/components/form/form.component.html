@@ -56,16 +56,38 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <div>
-   <p>Cantidad de tareas : {{dataService.data.length}}</p>
-   <p>Pendientes : {{dataService.data.length-dataService.realizadas.length}}</p>
-   <p>Realizadas :{{dataService.realizadas.length}}</p>
-   </div>
 
-   <p>% Realizadas</p>
-   <div class="porcentaje-progress">
-    <progress class="progreso" max="100" [value]="porcentaje"></progress>
-    <div>{{porcentaje}}%</div>
+      <div class="card text-bg-light mb-3" style="max-width: 10rem;">
+        <div class="card-header">Cantidad de tareas</div>
+        <div class="card-body">
+          <h5 class="card-title">{{dataService.data.length}}</h5>
+        </div>
+      </div>
+
+      <div class="card text-bg-light mb-3" style="max-width: 10rem;">
+        <div class="card-header">Pendientes</div>
+        <div class="card-body">
+          <h5 class="card-title">{{dataService.data.length-dataService.realizadas.length}}</h5>
+        </div>
+      </div>
+
+      <div class="card text-bg-light mb-3" style="max-width: 10rem;">
+        <div class="card-header">Realizadas</div>
+        <div class="card-body">
+          <h5 class="card-title">{{dataService.realizadas.length}}</h5>
+        </div>
+      </div>
+
+      <div class="card text-bg-light mb-3" style="max-width: 10rem;">
+        <div class="card-header">%</div>
+        <div class="card-body">
+          <div class="porcentaje-progress">
+            <progress class="progreso" max="100" [value]="porcentaje"></progress>
+            <div>{{porcentaje}}%</div>
+          </div>
+        </div>
+      </div>
+
   </div>
 
 </div>
