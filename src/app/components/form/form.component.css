@@ -88,3 +88,11 @@ flex-direction: column;
   background-color: rgb(8, 0, 84);
   color:white
 }
+
+@media (max-width:600px) {
+  .contenedor-extremo{
+
+    padding: 2rem !important;
+
+  }
+}
