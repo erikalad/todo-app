@@ -89,10 +89,10 @@ flex-direction: column;
   color:white
 }
 
-@media (max-width:1200px) {
+@media (max-width:600px) {
   .contenedor-extremo{
 
-    padding: 2rem !important;
+    padding: 1rem !important;
 
   }
 }
