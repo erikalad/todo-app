@@ -55,30 +55,30 @@
     <h5 class="offcanvas-title" id="offcanvasRightLabel">Estadisticas</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body">
+  <div class="offcanvas-body contenedor-cartas-estadistica">
 
-      <div class="card text-bg-light mb-3" style="max-width: 10rem;">
+      <div class="card text-bg-light mb-3 cartita" >
         <div class="card-header">Cantidad de tareas</div>
         <div class="card-body">
           <h5 class="card-title">{{dataService.data.length}}</h5>
         </div>
       </div>
 
-      <div class="card text-bg-light mb-3" style="max-width: 10rem;">
+      <div class="card text-bg-light mb-3 cartita" >
         <div class="card-header">Pendientes</div>
         <div class="card-body">
           <h5 class="card-title">{{dataService.data.length-dataService.realizadas.length}}</h5>
         </div>
       </div>
 
-      <div class="card text-bg-light mb-3" style="max-width: 10rem;">
+      <div class="card text-bg-light mb-3 cartita" >
         <div class="card-header">Realizadas</div>
         <div class="card-body">
           <h5 class="card-title">{{dataService.realizadas.length}}</h5>
         </div>
       </div>
 
-      <div class="card text-bg-light mb-3" style="max-width: 10rem;">
+      <div class="card text-bg-light mb-3 cartita" >
         <div class="card-header">%</div>
         <div class="card-body">
           <div class="porcentaje-progress">

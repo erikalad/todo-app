@@ -8,3 +8,13 @@
 p{
   margin:0px !important
 }
+
+.btn-primary{
+  background-color: rgba(255, 242, 176, 0.799);
+  border:none;
+  color:rgb(64, 64, 64)
+}
+
+.btn-primary:hover{
+  background-color:rgba(244, 215, 71, 0.796); ;
+}
