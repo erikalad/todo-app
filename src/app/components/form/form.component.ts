@@ -54,13 +54,13 @@ export class FormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-   this.dataService.porcentaje= this.porcentaje
+
    this.dataService.porcentaje=this.porcentaje
   }
 
   viewEstadisticas(){
     if(this.dataService.data.length >= this.dataService.realizadas.length){
-      this.porcentaje = ((this.dataService.realizadas.length*100)/this.dataService.data.length)
+      this.porcentaje = Math.round(((this.dataService.realizadas.length*100)/this.dataService.data.length))
       console.log(((this.dataService.realizadas.length*100)/this.dataService.data.length))
       this.dataService.porcentaje= this.porcentaje
       this.dataService.porcentaje=this.porcentaje

@@ -1,9 +1,10 @@
-
+<div class="contenedor-extremo">
 <div>
-  <h3 class="todoapp-title">Lista de tareas</h3>
+  <h3 class="todoapp-title ">Lista de tareas</h3>
+  <hr>
 <form class="row g-3">
   <div class="col-auto">
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" #newTodo (ngModel)="newTodo" placeholder="Nueva tarea">{{textarea}}</textarea>
+    <textarea class="form-control" id="exampleFormControlTextarea1"  #newTodo (ngModel)="newTodo" placeholder="Nueva tarea">{{textarea}}</textarea>
   </div>
   <div >
     <button type="submit" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="cargarTodo(newTodo.value)">Añadir</button>
@@ -49,6 +50,8 @@
 <button class="btn btn-primary boton-estadisticas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" (click)="viewEstadisticas()">Estadisticas <span class="material-icons">
   bar_chart
   </span></button>
+
+</div>
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">

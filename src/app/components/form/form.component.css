@@ -70,3 +70,16 @@
 .cartita{
   width: 12rem;
 }
+
+.contenedor-extremo{
+  display: flex;
+flex-direction: column;
+
+  border:1px solid grey;
+  padding: 5rem;
+  border-radius: 20px;
+}
+
+.todoapp-title{
+  text-align: center;
+}
